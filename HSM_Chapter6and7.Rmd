@@ -1,0 +1,40 @@
+---
+title: "HSM Chapter 6 and 7"
+output: html_notebook
+---
+
+# {.tabset}
+
+## 6.1
+
+* Packages that are used in chapter
+
+```{r}
+rm(list = ls())
+
+library(maptools)
+library(sp)
+library(raster)
+library(rgdal)
+
+
+```
+
+
+* Datasets talked about
+  + Climate data: Lookup Worldclim, PRISM (for North America), DAYMET
+  + Boarder data: Lookup Natural Earth, GADM and Marine Regions
+  
+## 6.2
+
+### here we learn the basics of spatial data visualization, processing through R - with a focus on raster data. GIS layers are generally available in ESRIs grid as well as GeoTIFF
+
+```{r}
+library(biomod2)
+
+bio3<- raster("C:/Users/Sonya/Documents/R/win-library/3.6/biomod2/external/bioclim/future/bio3")
+
+bbox(bio3)
+
+```
+
